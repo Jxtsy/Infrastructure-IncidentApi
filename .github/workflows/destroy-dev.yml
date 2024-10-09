@@ -1,11 +1,6 @@
-name: Deploy Dev Infrastructure
+name: Destroy Dev Infrastructure
 on:
-    push:
-        branches:
-            - master
-        paths:
-            - 'env/dev/**'
-            - 'modules/**'
+    workflow_dispatch:
 
 permissions: 
   id-token: write
@@ -49,15 +44,10 @@ jobs:
               with:
                 terraform_version: 1.9.7
                 terraform_wrapper: false
-            
-            - name: Terraform init
-              run: terraform -chdir=env/dev init
- 
-            - name: Terraform format
-              run: terraform -chdir=env/dev fmt
- 
-            - name: Terraform plan
-              run: terraform -chdir=env/dev plan
 
-            - name: Terraform apply
-              run: terraform -chdir=env/dev apply --auto-approve
+            - name: Terraform Init
+              run: terraform -chdir=env/dev init
+
+            - name: Terraform destroy
+              run: terraform -chdir=env/dev destroy --auto-approve
+            
