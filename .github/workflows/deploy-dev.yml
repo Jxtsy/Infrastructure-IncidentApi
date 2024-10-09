@@ -10,7 +10,7 @@ on:
 permissions: 
   id-token: write
   contents: read
-  pull-request: write
+  pull-requests: write
  
 env:
   ARM_CLIENT_ID: "${{secrets.ARM_CLIENT_ID}}"
@@ -58,3 +58,6 @@ jobs:
  
             - name: Terraform plan
               run: terraform -chdir=env/dev plan
+
+            - name: Terraform apply
+              run: terraform -chdir=env/dev apply --auto-approve
