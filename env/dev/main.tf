@@ -27,5 +27,5 @@ module "dev_vm" {
     value = module.dev_vm.IN_IP_Output
   
   }
-  
+     
       
