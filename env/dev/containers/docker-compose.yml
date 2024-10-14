@@ -30,7 +30,7 @@ services:
       - reverse-proxy
   
   incident-api:
-    image: Jaramillojst/incident-api:latest
+    image: jaramillojst/incidentapi:latest
     container_name: IncidentApi
     expose:
       - "3000"
