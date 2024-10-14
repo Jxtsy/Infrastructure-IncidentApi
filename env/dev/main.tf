@@ -26,6 +26,6 @@ module "dev_vm" {
   output "public_ip" {
     value = module.dev_vm.IN_IP_Output
   
-  }
+  }   
      
       
