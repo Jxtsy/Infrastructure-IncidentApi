@@ -23,9 +23,9 @@ module "dev_vm" {
   vnet_name                  = "IN-VNET-Jaramillo"
 
 }
-  output "ippublica" {
+  output "public_ip" {
     value = module.dev_vm.IN_IP_Output
-    
+  
   }
   
       
