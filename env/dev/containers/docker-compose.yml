@@ -31,7 +31,7 @@ services:
   
   incident-api:
     image: jaramillojst/incidentapi:latest
-    container_name: IncidentApi
+    container_name: incident-api
     expose:
       - "3000"
     depends_on:
@@ -49,7 +49,7 @@ services:
       LETSENCRYPT_EMAIL: ${MAIL_USER}
   
   mongo:
-    image: mongo:latest
+    image: mongo
     container_name: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}

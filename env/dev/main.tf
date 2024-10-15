@@ -13,7 +13,7 @@ module "dev_vm" {
   port                       = var.PORT
   server_name                = "IN-Server-Jaramillo"
   location                   = "eastus2"
-  mapbox_access_token        = var.MAPBOX_ACCESS_TOKEN
+  mapbox_access_token        = var.MAPBOX_ACCESS_TOKEN 
   mongo_url                  = var.MONGO_URL 
   subnet_name                = "IN-SUBNET-Jaramillo"
   mongo_initdb_root_username = var.MONGO_INITDB_ROOT_USERNAME
